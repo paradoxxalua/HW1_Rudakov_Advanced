@@ -40,9 +40,9 @@ let moneyEarnd = -(costProd- toPay); // Заробіток продавці пі
 const toHtml = document.querySelector('#barvaToHtml');
 
 toHtml.innerHTML = `
-<p>Насіння кортопляне: ${potatoSeed}</p>
-<p>насіння дуба: ${oakSeed}</p>
-<p>Чорниці насіння: ${bilberrySeed}</p>
+<p>Насіння картопля: ${potatoSeed}</p>
+<p>Насіння дуб: ${oakSeed}</p>
+<p>Насіння чорниц: ${bilberrySeed}</p>
 <p>Найдорощий товар: ${maxPrice}</p>
 <p>Найдешевший товар: ${minPrice}</p>
 <p>Сума усіх цін: ${sumSeedPrice}</p>
