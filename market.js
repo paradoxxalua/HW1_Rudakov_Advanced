@@ -1,48 +1,48 @@
 // Оголошенно змінні, тим данних number
-let potatoSeed = 15.678;
-let oakSeed = 123.965;
-let bilberrySeed = 90.2345;
+const potatoSeed = 15.678;
+const oakSeed = 123.965;
+const bilberrySeed = 90.2345;
 
 // Використоно метод Math.max/min, для отримання найбільшого та найменшого значення ціни
-let maxPrice = Math.max(potatoSeed, oakSeed, bilberrySeed);
-let minPrice = Math.min(potatoSeed, oakSeed, bilberrySeed);
+const maxPrice = Math.max(potatoSeed, oakSeed, bilberrySeed);
+const minPrice = Math.min(potatoSeed, oakSeed, bilberrySeed);
 
 // Суму усіх цін присвоєно в одну змінну
-let sumSeedPrice = (potatoSeed + oakSeed + bilberrySeed);
+const sumSeedPrice = (potatoSeed + oakSeed + bilberrySeed);
 
 // Сума цін усього заданого насіння окреглену у меншу сторону
-let sumLowerInt = Math.floor(sumSeedPrice);
+const sumLowerInt = Math.floor(sumSeedPrice);
 
 
 // Сума заданих цін, яка округлена до сотень
-let sumHigherInt = Math.round(sumSeedPrice / 100) * 100;
+const sumHigherInt = Math.round(sumSeedPrice / 100) * 100;
 
 // Перевірка, на парність суми усіх цін на насіння
-let oddOrEven = n => !(n % 2);
+const oddOrEven = n => !(n % 2);
 
 // Виведення суми решти при оплаті 500грн
 let pay = 500;
-let remainderSeed = (pay - sumSeedPrice);
+const remainderSeed = (pay - sumSeedPrice);
 
 // Виведено середнє значення цін, округлене до другого знаку після коми
-let middleVal = sumSeedPrice/3;
+const middleVal = sumSeedPrice/3;
 
 // Для клієнта створена можливість отримати знижку випадковим чином, виведено суму оплати зі знижкою та сума прибутку продавця
-let saleValue = Math.floor(Math.random() * (100 - 1) + 1); // Обраховує рандомний відсоток для знижки кожному покупцю
+const saleValue = Math.floor(Math.random() * (100 - 1) + 1); // Обраховує рандомний відсоток для знижки кожному покупцю
 
-let toPay = (sumSeedPrice - sumSeedPrice*saleValue/100); // Обрахує суму до сплати покупцю з урахування знижки
+const toPay = (sumSeedPrice - sumSeedPrice*saleValue/100); // Обрахує суму до сплати покупцю з урахування знижки
 
-let costProd = (sumLowerInt/2); // Собівартість усього товару разом
-let moneyEarnd = -(costProd- toPay); // Заробіток продавці після продажу
+const costProd = (sumLowerInt/2); // Собівартість усього товару разом
+const moneyEarnd = -(costProd- toPay); // Заробіток продавці після продажу
 
 
 // Вивід данних у HTML 
-const toHtml = document.querySelector('#barvaToHtml');
+const toHtml = document.getElementById('barvaToHtml');
 
 toHtml.innerHTML = `
-<p>Насіння картопля: ${potatoSeed}</p>
-<p>Насіння дуб: ${oakSeed}</p>
-<p>Насіння чорниц: ${bilberrySeed}</p>
+<p>Насіння картопляне: ${potatoSeed}</p>
+<p>Насіння дуба: ${oakSeed}</p>
+<p>Чорниці насіння: ${bilberrySeed}</p>
 <p>Найдорощий товар: ${maxPrice}</p>
 <p>Найдешевший товар: ${minPrice}</p>
 <p>Сума усіх цін: ${sumSeedPrice}</p>
